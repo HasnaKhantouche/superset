@@ -104,6 +104,8 @@ services:
       superset-init:
         condition: service_completed_successfully
     volumes: *superset-volumes
+    environment:
+      SUPERSET_CONFIG_PATH: /app/superset/superset_config.py  
 
   superset-websocket:
     container_name: superset_websocket
